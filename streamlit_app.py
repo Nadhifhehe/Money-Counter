@@ -1,11 +1,26 @@
 import streamlit as st
+import streamlit as st
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from datetime import datetime
 
+# ================== KONEKSI KE GOOGLE SHEET ==================
+scope = [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/drive"
+]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name(
+    "money-tracker-key.json", scope   # ✅ KODE YANG KAMU TANYA DITULIS DI SINI
+)
+
+client = gspread.authorize(creds)
+
+sheet = client.open("Money Tracker").sheet1
 # ---------------- INIT PAGE ----------------
 if "page" not in st.session_state:
     st.session_state.page = "home"
-creds = ServiceAccountCredentials.from_json_keyfile_name(
-    "money-tracker-key.json", scope
-)
+
 # ---------------- HOME ----------------
 if st.session_state.page == "home":
     st.title("Money Tracker")
