@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Halaman Pemasukan")
 
-jumlah = st.number_input("Masukkan jumlah uang:", 0)
+jumlah = st.number_input("Masukkan jumlah uang", 0)
 
 if st.button("Simpan"):
     st.success("Pemasukan disimpan!")
