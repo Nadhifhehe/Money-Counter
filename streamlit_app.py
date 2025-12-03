@@ -43,6 +43,8 @@ st.markdown("""
     flex-wrap: wrap;
 }
 
+}
+
 .btn-responsive {
     background: #7CDB5A;
     padding: 14px 0;
@@ -53,7 +55,7 @@ st.markdown("""
     cursor: pointer;
 
     width: 40%;        /* ✅ Fleksibel di desktop */
-    max-width: 220px; /* ✅ Tidak kepanjangan */
+    max-width: 600px; /* ✅ Tidak kepanjangan */
     min-width: 160px; /* ✅ Tidak kekecilan */
 }
 
