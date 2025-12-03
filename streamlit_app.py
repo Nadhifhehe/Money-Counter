@@ -3,7 +3,9 @@ import streamlit as st
 # ---------------- INIT PAGE ----------------
 if "page" not in st.session_state:
     st.session_state.page = "home"
-
+creds = ServiceAccountCredentials.from_json_keyfile_name(
+    "money-tracker-key.json", scope
+)
 # ---------------- HOME ----------------
 if st.session_state.page == "home":
     st.title("Money Tracker")
@@ -48,3 +50,5 @@ elif st.session_state.page == "pengeluaran":
 
     if st.button("⬅️ Kembali"):
         st.session_state.page = "home"
+
+
