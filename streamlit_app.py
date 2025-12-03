@@ -39,6 +39,10 @@ st.markdown("""
             display: flex;
             gap: 20px;
             margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         }
         .card {
             border-radius: 20px;
