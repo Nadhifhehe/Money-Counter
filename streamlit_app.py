@@ -36,12 +36,30 @@ st.markdown("""
             font-weight: bold;
         }
         .btn-box {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-responsive {
+    background: #7CDB5A;
+    padding: 12px 0;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 180px;   /* Default desktop */
+    cursor: pointer;
+}
+
+/* ✅ KHUSUS HP */
+@media (max-width: 600px) {
+    .btn-responsive {
+        width: 100%;   /* Full lebar HP */
+    }
+}
 
         }
         .card {
@@ -78,14 +96,11 @@ st.markdown("""
 # ---------- BUTTONS ----------
 st.markdown("""
 <div class="btn-box">
-    <div style="background:#7CDB5A; padding:10px 30px; border-radius:12px; color:white; font-weight:bold;">
-        Pemasukan
-    </div>
-    <div style="background:#7CDB5A; padding:10px 30px; border-radius:12px; color:white; font-weight:bold;">
-        Pengeluaran
-    </div>
+    <div class="btn-responsive">Pemasukan</div>
+    <div class="btn-responsive">Pengeluaran</div>
 </div>
 """, unsafe_allow_html=True)
+
 
 # ---------- GRID LAYOUT ----------
 col1, col2 = st.columns(2)
