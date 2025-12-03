@@ -45,13 +45,16 @@ st.markdown("""
 
 .btn-responsive {
     background: #7CDB5A;
-    padding: 12px 0;
+    padding: 14px 0;
     border-radius: 12px;
     color: white;
     font-weight: bold;
     text-align: center;
-    width: 180px;   /* Default desktop */
     cursor: pointer;
+
+    width: 40%;        /* ✅ Fleksibel di desktop */
+    max-width: 220px; /* ✅ Tidak kepanjangan */
+    min-width: 160px; /* ✅ Tidak kekecilan */
 }
 
 /* ✅ KHUSUS HP */
