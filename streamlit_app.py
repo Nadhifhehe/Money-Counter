@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(layout="centered")
 
 kiri, kanan = st.columns([1, 1], gap="large")
 
