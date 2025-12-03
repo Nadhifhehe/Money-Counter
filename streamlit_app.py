@@ -1,9 +1,10 @@
 import streamlit as st
 
-col1, col2 = st.columns(2)
+kiri, kanan = st.columns([1, 1], gap="large")
 
-with col1:
-    st.write("Ini di kiri")
+with kiri:
+    st.markdown("### Grafik")
+    st.markdown("### Wanted")
 
-with col2:
-    st.write("Ini di kanan")
+with kanan:
+    st.markdown("### Riwayat Transaksi")
